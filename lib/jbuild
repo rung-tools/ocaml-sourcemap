@@ -1,0 +1,13 @@
+(jbuild_version 1)
+
+(library
+  ((name sourcemap)
+   (public_name sourcemap)
+   (wrapped false)
+   (libraries (core))
+   (preprocess (pps
+     (ppx_jane
+      ppx_deriving.show
+      ppx_deriving.eq
+      ppx_deriving.ord
+      ppx_deriving.make)))))
